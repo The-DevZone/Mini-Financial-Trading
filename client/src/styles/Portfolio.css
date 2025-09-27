@@ -1,0 +1,139 @@
+/* Portfolio.css */
+.portfolio-container {
+  padding: 1.5rem;
+  background-color: #0f0f0f;
+  min-height: 92.5vh;
+  color: white;
+}
+
+.portfolio-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Stats Section */
+.portfolio-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.stat-card {
+  background: #1a1a1a;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 200px;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+/* Holdings Section */
+.holdings-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.holding-card {
+  background: #1a1a1a;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.holding-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.holding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.holding-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+
+.holding-category {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.holding-details {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.holding-values {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #fbbf24;
+}
+
+.holding-values div {
+  margin-bottom: 0.3rem;
+}
+
+.empty-message {
+  text-align: center;
+  color: #9ca3af;
+  padding: 2rem 0;
+  font-size: 1rem;
+}
+
+.holding-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #ddd;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+/* Highlighted Stats */
+.stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Colors for Lucide icons */
+.blue {
+  color: #3b82f6; /* Tailwind blue-500 */
+}
+.yellow {
+  color: #fbbf24;
+}
+.green {
+  color: #22c55e;
+}
+.red {
+  color: #ef4444;
+}

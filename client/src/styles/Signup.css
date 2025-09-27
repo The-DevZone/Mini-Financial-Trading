@@ -1,0 +1,138 @@
+/* src/assets/css/signup.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #000;
+  color: #fff; */
+}
+
+.body-continer{
+background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.back-button {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: #000;
+}
+
+.back-button svg {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  border: 1px solid #fbbf24;
+  box-shadow: 0 0 0 2px rgba(251, 190, 36, 0.2);
+}
+
+.file-label {
+  width: 100%;
+  padding: 14px;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-label:hover {
+  background-color: #2d2d2d;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #fbbf24;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #f59e0b;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.login-link {
+  color: #fbbf24;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
