@@ -82,7 +82,18 @@ npm install
 npm run dev
 # App runs on http://localhost:5173
 ```
+---
 
+## Environment Variables
+
+Create .env files as shown.
+
+|Backend (server/.env)|
+|PORT=3300|
+|MONGO_URL=mongodb://#########/minitrader|
+|JWT_SECRET=your_jwt_secret|
+|CORS_ORIGIN=http://localhost:5173|
+|UPLOAD_DIR=./uploads|
 ---
 
 ## 📊 API Documentation
