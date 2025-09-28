@@ -19,29 +19,45 @@ const adminRoutes = require('./routes/admin');
 
 const app = express();
 
+// ✅ STEP 1: SECURITY HEADERS
 app.use(helmet());
+
+// ✅ STEP 2: CORS — MUST BE BEFORE BODY PARSER & ROUTES
+const allowedOrigins = corsOrigin ? corsOrigin.split(',') : ['http://localhost:5173'];
 app.use(cors({
-  origin: corsOrigin.split(','),
+  origin: allowedOrigins,
   credentials: true
 }));
-// app.use(cors({ origin: corsOrigin, credentials: true }));
+
+// ✅ STEP 3: LOGGING
 app.use(morgan('dev'));
-app.use(express.json());
+
+// ✅ STEP 4: BODY PARSER — AFTER CORS!
+app.use(express.json({ limit: '10mb' }));
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
+// ✅ STEP 5: RATE LIMITER
 app.use('/api/auth', rateLimit({ windowMs: 60 * 1000, max: 20 }));
+
+// ✅ STEP 6: ROUTES
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/transactions', txRoutes);
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/watchlist', watchlistRoutes);
 app.use('/api/wallet', walletRoutes);
-app.use('/api/admin', adminRoutes); 
+app.use('/api/admin', adminRoutes);
 
-
+// ✅ HEALTH CHECK
 app.get('/', (_, res) => res.json({ status: 'ok', service: 'mini-trader-api' }));
 
+// ✅ ERROR HANDLER (last middleware)
 app.use(errorHandler);
+
+// ✅ START SERVER
 connectDB().then(() => {
-  app.listen(port, () => console.log(`API running http://localhost:${port}`));
+  app.listen(port, () => console.log(`API running on port ${port}`));
+}).catch(err => {
+  console.error("Database connection failed", err);
+  process.exit(1);
 });
