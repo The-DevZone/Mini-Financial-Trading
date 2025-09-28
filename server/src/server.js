@@ -20,7 +20,11 @@ const adminRoutes = require('./routes/admin');
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: corsOrigin, credentials: true }));
+app.use(cors({
+  origin: corsOrigin.split(','),
+  credentials: true
+}));
+// app.use(cors({ origin: corsOrigin, credentials: true }));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
