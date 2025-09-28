@@ -13,6 +13,10 @@
 - **Frontend:** React, Vite, React Query, Recharts, Tailwind CSS , external css.
 
 ---
+---
+## 🎯 Live link
+https://mini-financial-trading.vercel.app/
+---
 
 ## ✨ Core Features Implemented
 
