@@ -115,7 +115,7 @@ All endpoints (except Auth) are secured using **JWT** in the `Authorization: Bea
 
 ## 📹 Demo Video Walkthrough
 
-🔗 **[WATCH DEMO VIDEO HERE (3-5 Mins)](https://drive.google.com/your-demo-video-link)**
+🔗 **[WATCH DEMO VIDEO HERE (3-5 Mins)](https://drive.google.com/file/d/1AE7MwMH9E3k4UpFIei24WobJDAh7WDYI/view?usp=sharing)**
 
 **Key Demo Points:**
 1. **Signup:** Demonstrate KYC upload (shows file handling).
